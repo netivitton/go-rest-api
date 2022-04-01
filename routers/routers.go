@@ -2,6 +2,7 @@ package routers
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/netivitton/go-rest-api/user"
 )
 
 // InitRouter initialize routing information
