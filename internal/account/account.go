@@ -6,6 +6,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func link_login(c *gin.Context) {
+func LinkLogin(c *gin.Context) {
 	fmt.Println("GetTags")
 }

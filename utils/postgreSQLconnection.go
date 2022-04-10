@@ -24,3 +24,9 @@ func Connection() (gormdb *gorm.DB, err error) {
 	}
 	return db, err
 }
+
+func CloseDB(gormdb *gorm.DB) (err error) {
+	sqlDB, err := gormdb.DB()
+	sqlDB.Close()
+	return err
+}

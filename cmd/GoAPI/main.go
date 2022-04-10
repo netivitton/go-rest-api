@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 
@@ -10,6 +11,7 @@ import (
 
 func main() {
 	env := os.Getenv("APP_ENV")
+	fmt.Println("ENV:", env)
 	godotenv.Load(env + ".env")
 	routersInit := internal.InitRouter()
 	server := &http.Server{

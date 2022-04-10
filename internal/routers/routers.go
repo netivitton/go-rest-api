@@ -12,8 +12,6 @@ import (
 	middleware "github.com/netivitton/go-rest-api/internal/middleware"
 	"github.com/netivitton/go-rest-api/utils"
 
-	// "github.com/netivitton/go-rest-api/user"
-
 	"context"
 
 	ginglog "github.com/szuecs/gin-glog"
@@ -68,6 +66,7 @@ func InitRouter() *gin.Engine {
 		c.JSON(200, gin.H{"message": "Hello to public world"})
 	})
 	public.GET("/login", func(c *gin.Context) {
+		account.InsertAccount()
 		c.JSON(200, gin.H{"message": "Hello to public world"})
 	})
 	auth := public.Group("/oauth2")

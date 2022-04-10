@@ -9,15 +9,19 @@ import (
 // Defining a struct type
 type Account struct {
 	gorm.Model
+	UserName  string
+	Password  string
 	Name      string
 	Last_name string
 	Email     string
+	FA_code   string
 	AddressID int
 	Address   Address `gorm:"foreignkey:AddressID"`
 }
 
 type Address struct {
 	gorm.Model
+	ID      int
 	Home_no string
 }
 
